@@ -113,7 +113,7 @@ for (let item of foodItems) {
 
 
 let employeeDetails = {
-    name: "Naveen",
+    name: "naveen",
     age: 25,
     department: "IT",
     salary: 50000,
