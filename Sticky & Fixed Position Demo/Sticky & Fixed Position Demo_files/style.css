@@ -1,0 +1,161 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    min-height:250vh;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:70px;
+    background:#333;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+    z-index:1000;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+/* PAGE CONTENT */
+
+.container{
+    padding-top:120px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.intro h2{
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+.intro p{
+    font-size:16px;
+}
+
+/* STICKY CARD */
+
+.sticky-card{
+    position:sticky;
+    top:130px;
+
+    width:300px;
+    margin:100px auto;
+
+    background:white;
+    text-align:center;
+
+    border-radius:15px;
+    padding:30px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.avatar{
+    width:130px;
+    height:80px;
+    margin:auto;
+    overflow:hidden;
+
+    clip-path: polygon(
+        0% 50%,
+        20% 15%,
+        40% 0%,
+        50% 15%,
+        60% 0%,
+        80% 15%,
+        100% 50%,
+        80% 85%,
+        60% 100%,
+        50% 85%,
+        40% 100%,
+        20% 85%
+    );
+}
+
+.avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.badge{
+    position:absolute;
+    top:12px;
+    right:12px;
+
+    background:red;
+    color:white;
+
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* TEXT */
+
+.sticky-card h3{
+    margin-top:20px;
+    font-size:34px;
+}
+
+.sticky-card p{
+    color:#555;
+    font-size:18px;
+}
+
+/* SCROLL TEXT */
+
+.content{
+    margin-top:400px;
+}
+
+.content p{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* HELP BUTTON */
+
+.help-btn{
+    position:fixed;
+    right:30px;
+    bottom:25px;
+
+    background:#0d6efd;
+    color:white;
+
+    border:none;
+    border-radius:40px;
+
+    padding:16px 30px;
+    font-size:18px;
+    cursor:pointer;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+}

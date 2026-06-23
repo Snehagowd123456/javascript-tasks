@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student ID Card</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#e6e6e6;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .id-card{
+            width:380px;
+            background:rgb(28, 114, 103);
+            border:5px solid #502c34;
+            border-radius:20px;
+            padding:5px;
+            text-align:center;
+        }
+
+        .college-name{
+            font-size:20px;
+            font-weight:bold;
+            margin-top:15px;
+        }
+
+        .title{
+            font-size:18px;
+            margin-top:5px;
+            margin-bottom:10px;
+        }
+
+        hr{
+            border:none;
+            border-top:3px solid #d3d3d3;
+            margin:20px 0;
+        }
+
+        .photo{
+            width:140px;
+            height:140px;
+            border:4px solid #3498db;
+            border-radius:50%;
+            overflow:hidden;
+            margin:10px auto;
+        }
+
+        .photo img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        .student-name{
+            font-size:24px;
+            font-weight:bold;
+            margin:5px 0;
+        }
+
+        .details{
+            border:1px dashed #cccccc;
+            padding:5px;
+            text-align:left;
+            font-size:18px;
+            line-height:2;
+        }
+
+        .footer{
+            margin-top:5px;
+            font-size:15px;
+            line-height:2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="id-card">
+
+        <div class="college-name">
+            XYZ Engineering College
+        </div>
+
+        <div class="title">
+            Student Identity Card
+        </div>
+
+        <hr>
+
+        <div class="photo">
+            <img src="IDCard_Project/student.jpg.jpg" alt="Student Photo">
+        </div>
+
+        <div class="student-name">
+            Sneha
+        </div>
+
+        <div class="details">
+            <strong>ID No:</strong> CS2024035 <br>
+            <strong>Department:</strong> CS <br>
+            <strong>Year:</strong> FIRST Year <br>
+            <strong>DOB:</strong> 05-10-1999 <br>
+            <strong>Blood Group:</strong> AB+ <br>
+            <strong>Phone:</strong> 89XXX XX130
+        </div>
+
+        <hr>
+
+        <div class="footer">
+    Valid Till: May 2026
+    <br>
+    Authorized Signature
+</div>
+
+    </div>
+
+</body>
+</html>

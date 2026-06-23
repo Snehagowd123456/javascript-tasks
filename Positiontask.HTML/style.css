@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.sticky-header{
+    position:sticky;
+    top:0;
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+.batman-container{
+    position:relative;
+    width:90%;
+    margin:30px auto;
+}
+
+.batman-container img{
+    width:100%;
+}
+
+.absolute-text{
+    position:absolute;
+    top:20px;
+    right:20px;
+    color:white;
+    padding:10px;
+}
+
+.joker-container img{
+    width:100%;
+}
+
+.fixed-box{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    color:white;
+    padding:10px;
+}

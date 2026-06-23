@@ -1,0 +1,128 @@
+!DOCTYPE html
+html
+head
+    titleStudent ID Cardtitle
+
+    style
+        {
+            margin0;
+            padding0;
+            box-sizingborder-box;
+            font-familyArial, sans-serif;
+        }
+
+        body{
+            background#e6e6e6;
+            displayflex;
+            justify-contentcenter;
+            align-itemscenter;
+            min-height100vh;
+        }
+
+        .id-card{
+            width380px;
+            backgroundrgb(28, 114, 103);
+            border5px solid #502c34;
+            border-radius20px;
+            padding5px;
+            text-aligncenter;
+        }
+
+        .college-name{
+            font-size20px;
+            font-weightbold;
+            margin-top15px;
+        }
+
+        .title{
+            font-size18px;
+            margin-top5px;
+            margin-bottom10px;
+        }
+
+        hr{
+            bordernone;
+            border-top3px solid #d3d3d3;
+            margin20px 0;
+        }
+
+        .photo{
+            width140px;
+            height140px;
+            border4px solid #3498db;
+            border-radius50%;
+            overflowhidden;
+            margin10px auto;
+        }
+
+        .photo img{
+            width100%;
+            height100%;
+            object-fitcover;
+        }
+
+        .student-name{
+            font-size24px;
+            font-weightbold;
+            margin5px 0;
+        }
+
+        .details{
+            border1px dashed #cccccc;
+            padding5px;
+            text-alignleft;
+            font-size18px;
+            line-height2;
+        }
+
+        .footer{
+            margin-top5px;
+            font-size15px;
+            line-height2;
+        }
+    style
+head
+
+body
+
+    div class=id-card
+
+        div class=college-name
+            XYZ Engineering College
+        div
+
+        div class=title
+            Student Identity Card
+        div
+
+        hr
+
+        div class=photo
+            img src=IDCard_Projectstudent.jpg.jpg alt=Student Photo
+        div
+
+        div class=student-name
+            Sneha
+        div
+
+        div class=details
+            strongID Nostrong CS2024035 br
+            strongDepartmentstrong CS br
+            strongYearstrong FIRST Year br
+            strongDOBstrong 05-10-1999 br
+            strongBlood Groupstrong AB+ br
+            strongPhonestrong 89XXX XX130
+        div
+
+        hr
+
+        div class=footer
+    Valid Till May 2026
+    br
+    Authorized Signature
+div
+
+    div
+
+body
+html
