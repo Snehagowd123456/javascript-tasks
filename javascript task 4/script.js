@@ -1,0 +1,271 @@
+
+// TASK 1: Employee Management System
+
+
+let employees = [
+    { name: "priya", id: 101, salary: 30000 },
+    { name: "sneha",   id: 102, salary: 60000 }
+];
+
+for (let emp of employees) {
+    console.log(`Employee: ${emp.name}, ID: ${emp.id}, Salary: ₹${emp.salary}`);
+    if (emp.salary >= 50000) {
+        console.log("Employee Eligible For Bonus");
+    } else {
+        console.log("Employee Not Eligible For Bonus");
+    }
+}
+
+
+
+// TASK 2: Student Result Portal
+
+let marks = {
+    math:    85,
+    science: 72,
+    english: 90,
+    history: 65,
+    hindi:   78
+};
+
+let total      = marks.math + marks.science + marks.english + marks.history + marks.hindi;
+let percentage = (total / 500) * 100;
+
+console.log(`Total Marks : ${total}`);
+console.log(`Percentage  : ${percentage.toFixed(2)}%`);
+
+let grade;
+if (percentage >= 90) {
+    grade = "A+";
+} else if (percentage >= 80) {
+    grade = "A";
+} else if (percentage >= 70) {
+    grade = "B";
+} else if (percentage >= 60) {
+    grade = "C";
+} else {
+    grade = "Fail";
+}
+console.log(`Grade: ${grade}`);
+
+
+// TASK 3: E-Commerce Cart
+
+
+let products = [
+    { name: "Laptop",   price: 50000 },
+    { name: "Mouse",    price: 1000  },
+    { name: "Keyboard", price: 2000  }
+];
+
+function calculateBill(products) {
+    let total = 0;
+    for (let product of products) {
+        total += product.price;
+    }
+
+    if (total > 5000) {
+        let discount   = total * 0.10;
+        let finalBill  = total - discount;
+        console.log(`Original Bill : ₹${total}`);
+        console.log(`Discount (10%): ₹${discount}`);
+        console.log(`Final Bill    : ₹${finalBill}`);
+    } else {
+        console.log(`Total Bill: ₹${total}`);
+    }
+}
+
+calculateBill(products);
+
+
+// TASK 4: Login Authentication
+
+
+let username = "admin";
+let password = "12345";
+
+let inputUsername = "admin";   
+let inputPassword = "12345";   
+
+let message = (inputUsername === username && inputPassword === password)
+    ? "Login Success"
+    : "Invalid Credentials";
+
+console.log(message);
+
+
+
+// TASK 5: Traffic Signal System
+
+
+function trafficSignal(color) {
+    switch (color) {
+        case "Red":
+            console.log("Red -> Stop");
+            break;
+        case "Yellow":
+            console.log("Yellow -> Ready");
+            break;
+        case "Green":
+            console.log("Green -> Go");
+            break;
+        default:
+            console.log("Unknown signal color");
+    }
+}
+
+trafficSignal("Red");
+trafficSignal("Yellow");
+trafficSignal("Green");
+
+
+
+// TASK 6: ATM Withdrawal System
+
+
+let balance    = 10000;  
+let withdrawal = 5000;   
+
+if (withdrawal <= 0) {
+    console.log("Invalid amount. Enter a positive value.");
+} else if (withdrawal > balance) {
+    console.log("Insufficient Balance! Transaction Failed.");
+} else {
+    balance -= withdrawal;
+    console.log(`Withdrawal Successful! Remaining Balance: ₹${balance}`);
+}
+
+
+
+// TASK 7: Online Food Order (Callback Functions)
+
+
+function orderFood(onOrderPlaced) {
+    console.log("Order Received");
+    onOrderPlaced();
+}
+
+function prepareFood(onPrepared) {
+    console.log("Food Preparing");
+    onPrepared();
+}
+
+function deliverFood() {
+    console.log("Food Delivered");
+}
+
+orderFood(function () {
+    prepareFood(function () {
+        deliverFood();
+    });
+});
+
+
+// TASK 8: Cashback Generator (Generator Function)
+
+
+function* cashbackGenerator() {
+    yield "10% Cashback";
+    yield "20% Cashback";
+    yield "50% Cashback";
+    yield "Better Luck Next Time";
+}
+
+let cashback = cashbackGenerator();
+console.log(cashback.next().value);  
+console.log(cashback.next().value);  
+console.log(cashback.next().value);  
+console.log(cashback.next().value);  
+
+
+
+// TASK 9: Hospital Patient Check (Nested If)
+
+
+let age    = 25;
+let weight = 55;
+
+if (age > 18) {
+    if (weight > 50) {
+        console.log("Eligible For Treatment");
+    } else {
+        console.log("Not Eligible (Weight too low)");
+    }
+} else {
+    console.log("Not Eligible (Age below 18)");
+}
+
+
+
+// TASK 10: Mini Employee Portal (CRUD Operations)
+
+
+let employeePortal = [];
+
+// Add Employee
+function addEmployee(name, salary) {
+    let id  = employeePortal.length + 101;
+    let emp = { id, name, salary };
+    employeePortal.push(emp);
+    console.log(`Employee Added: ${name} (ID: ${id})`);
+}
+
+// View All Employees
+function viewEmployees() {
+    if (employeePortal.length === 0) {
+        console.log("No employees found.");
+        return;
+    }
+    console.log("--- Employee List ---");
+    for (let emp of employeePortal) {
+        console.log(`ID: ${emp.id} | Name: ${emp.name} | Salary: ₹${emp.salary}`);
+    }
+}
+
+// Calculate Bonus (10% of salary)
+function calculateBonus(id) {
+    let emp = employeePortal.find(e => e.id === id);
+    if (emp) {
+        let bonus = emp.salary * 0.10;
+        console.log(`Bonus for ${emp.name}: ₹${bonus}`);
+    } else {
+        console.log("Employee not found.");
+    }
+}
+
+// Search Employee by ID
+function searchEmployee(id) {
+    let emp = employeePortal.find(e => e.id === id);
+    if (emp) {
+        console.log(`Found -> ID: ${emp.id} | Name: ${emp.name} | Salary: ₹${emp.salary}`);
+    } else {
+        console.log(`No employee found with ID: ${id}`);
+    }
+}
+
+// Delete Employee
+function deleteEmployee(id) {
+    let index = employeePortal.findIndex(e => e.id === id);
+    if (index !== -1) {
+        let removed = employeePortal.splice(index, 1);
+        console.log(`Deleted Employee: ${removed[0].name}`);
+    } else {
+        console.log("Employee not found.");
+    }
+}
+
+// Total Employees Count
+function totalEmployees() {
+    console.log(`Total Employees: ${employeePortal.length}`);
+}
+
+
+addEmployee("sneha", 30000);
+addEmployee("John",   60000);
+addEmployee("Priya",  45000);
+viewEmployees();
+calculateBonus(101);
+searchEmployee(102);
+deleteEmployee(101);
+totalEmployees();
+viewEmployees();
