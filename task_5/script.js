@@ -1,6 +1,4 @@
-// ======================================
 // TASK 1 - Employee Salary
-// ======================================
 
 function yearlySalary(monthlySalary) {
     return monthlySalary * 12;
@@ -9,9 +7,7 @@ function yearlySalary(monthlySalary) {
 console.log("Yearly Salary: ₹" + yearlySalary(45000));
 
 
-// ======================================
 // TASK 2 - Student Pass or Fail
-// ======================================
 
 function checkResult(marks) {
     if (marks >= 35) {
@@ -24,9 +20,7 @@ function checkResult(marks) {
 console.log(checkResult(72));
 
 
-// ======================================
 // TASK 3 - Food Bill
-// ======================================
 
 function foodBill(price, quantity) {
     return price * quantity;
@@ -35,9 +29,7 @@ function foodBill(price, quantity) {
 console.log("Total Bill: ₹" + foodBill(180, 3));
 
 
-// ======================================
 // TASK 4 - Welcome Employee
-// ======================================
 
 function welcomeEmployee(name, department) {
     console.log("Welcome " + name);
@@ -47,9 +39,7 @@ function welcomeEmployee(name, department) {
 welcomeEmployee("Sneha", "Development");
 
 
-// ======================================
 // TASK 5 - Shopping Discount
-// ======================================
 
 function shopping(price, discount) {
     return price - discount;
@@ -58,9 +48,7 @@ function shopping(price, discount) {
 console.log("Final Amount : ₹" + shopping(5000, 500));
 
 
-// ======================================
 // TASK 6 - Company Login (Callback)
-// ======================================
 
 function login(callback) {
     console.log("Login Successful");
@@ -74,9 +62,7 @@ function dashboard() {
 login(dashboard);
 
 
-// ======================================
 // TASK 7 - Food Delivery (Higher Order Function)
-// ======================================
 
 function order(callback) {
     console.log("Order Received");
@@ -104,9 +90,7 @@ order(function () {
 });
 
 
-// ======================================
 // TASK 8 - Lucky Draw (Generator)
-// ======================================
 
 function* coupons() {
     yield "10%";
@@ -123,9 +107,7 @@ console.log(coupon.next().value);
 console.log(coupon.next().value);
 
 
-// ======================================
 // TASK 9 - Employee Bonus (Currying)
-// ======================================
 
 function bonus(salary) {
     return function (bonusAmount) {
@@ -135,10 +117,7 @@ function bonus(salary) {
 
 console.log("Total Salary : ₹" + bonus(50000)(5000));
 
-
-// ======================================
 // TASK 10 - Merge Employee Details
-// ======================================
 
 let employeePersonal = {
     name: "Sneha",
@@ -158,9 +137,7 @@ let employee = {
 console.log(employee);
 
 
-// ======================================
 // TASK 11 - Shopping Cart Merge
-// ======================================
 
 let cart1 = ["Mobile", "Laptop"];
 let cart2 = ["Mouse", "Keyboard"];
@@ -170,9 +147,7 @@ let cart = [...cart1, ...cart2];
 console.log(cart);
 
 
-// ======================================
 // TASK 12 - Student Marks (Rest Operator)
-// ======================================
 
 function student(name, ...marks) {
 
@@ -192,9 +167,7 @@ function student(name, ...marks) {
 student("Sneha", 90, 85, 88, 95);
 
 
-// ======================================
 // TASK 13 - Object Destructuring
-// ======================================
 
 let product = {
     name: "Laptop",
@@ -208,10 +181,7 @@ let { name, price } = product;
 console.log(name);
 console.log(price);
 
-
-// ======================================
 // TASK 14 - Array Destructuring
-// ======================================
 
 let customer = [101, "Sneha", "Bangalore", 9876543210];
 
@@ -222,9 +192,7 @@ console.log(customerName);
 console.log(city);
 
 
-// ======================================
 // TASK 15 - Push()
-// ======================================
 
 let shoppingCart = ["Mobile", "Laptop"];
 
@@ -233,29 +201,22 @@ shoppingCart.push("Headphone");
 console.log(shoppingCart);
 
 
-// ======================================
 // TASK 16 - Pop()
-// ======================================
 
 shoppingCart.pop();
 
 console.log(shoppingCart);
 
-
-// ======================================
 // TASK 17 - Splice()
-// ======================================
 
 let employees = ["Rahul", "Arun", "John", "David"];
 
-employees.splice(2, 1, "Naveen");
+employees.splice(2, 1, "Sneha");
 
 console.log(employees);
 
 
-// ======================================
 // TASK 18 - Includes()
-// ======================================
 
 let products = ["Mouse", "Keyboard", "Monitor", "Laptop"];
 
@@ -266,9 +227,7 @@ if (products.includes("Laptop")) {
 }
 
 
-// ======================================
 // TASK 19 - Sort()
-// ======================================
 
 let salaries = [25000, 45000, 30000, 70000];
 
@@ -277,9 +236,7 @@ salaries.sort((a, b) => a - b);
 console.log(salaries);
 
 
-// ======================================
 // TASK 20 - Reverse()
-// ======================================
 
 let messages = ["Hi", "Hello", "How are you?", "Good Morning"];
 
@@ -288,9 +245,7 @@ messages.reverse();
 console.log(messages);
 
 
-// ======================================
 // BONUS PROJECT - Employee Management System
-// ======================================
 
 let employeeList = [];
 
